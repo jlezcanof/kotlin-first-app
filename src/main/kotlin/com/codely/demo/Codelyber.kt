@@ -23,12 +23,10 @@ fun main() {
     }?.also {
         println("You wrote $it")
     }.run {
-        with(Period.between(this, LocalDate.now())){
+        with(Period.between(this, LocalDate.now())) {
             println("The different between the date you wrote and today is ${this.years}")
         }
     }
-
 }
-
 
 fun supportNulableString(line: String?) = line
